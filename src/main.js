@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import {getComponent} from './components/componentMap';
+Vue.prototype.$getComponent = getComponent;
+
 new Vue({
   router,
   store,
