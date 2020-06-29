@@ -2,7 +2,7 @@ import { vm } from "@/main";
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   user: {},
 };
 

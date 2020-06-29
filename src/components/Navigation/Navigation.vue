@@ -1,7 +1,7 @@
 <template>
   <div class="navigation flex flex-align-center flex-justify-between">
     <component :is="$getComponent('AppBanner')" :appName="packageJson.name" />
-    <component :is="$getComponent('NavigationLinks')" />
+    <component v-if="!isAuthenticated" :is="$getComponent('NavigationLinks')" />
   </div>
 </template>
 
@@ -14,6 +14,12 @@ export default {
     return {
       packageJson: pkgJson
     };
+  },
+
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters["auth/getIsAuthenticated"];
+    }
   }
 };
 </script>
