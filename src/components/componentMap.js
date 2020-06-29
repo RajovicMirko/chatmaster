@@ -1,11 +1,13 @@
-import Navigation from './Navigation'
-import AppBanner from './AppBanner'
+import Navigation from "./Navigation/Navigation";
+import NavigationLinks from "./Navigation/NavigationLinks";
+import AppBanner from "./AppBanner";
 
 const components = {
   Navigation,
-  AppBanner
-}
+  NavigationLinks,
+  AppBanner,
+};
 
-export function getComponent(componentName){
+export function getComponent(componentName) {
   return components[componentName];
 }

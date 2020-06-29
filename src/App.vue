@@ -6,16 +6,11 @@
 </template>
 
 <script>
-import Navigation from './components/Navigation';
-
 export default {
-  name: 'App',
-  components:{
-    Navigation
-  }
-}
+  name: "App"
+};
 </script>
 
 <style lang="scss">
-  @import '@/scss/app.scss';
+@import "@/scss/app.scss";
 </style>

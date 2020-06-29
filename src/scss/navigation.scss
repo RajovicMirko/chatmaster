@@ -1,22 +1,27 @@
-.navigation{
+.navigation {
   height: $nav-height;
   background-color: $primary;
   color: $white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  padding: 0 0.5rem;
 }
 
-.navigation .banner{
-  margin-left: 0.5rem;
+.navigation .banner {
 }
 
-.navigation .banner-icon{
+.navigation .banner-icon {
   width: 3rem;
-  margin: 5px 2px 5px 5px;
+  margin: 0 2px 5px 0;
   padding: 0;
 }
 
-
-.navigation .banner-title{
+.navigation .banner-title {
   margin-left: -10px;
   font-size: 1.5rem;
+}
+
+.links .link {
+  color: $white;
+  margin-right: 0.4rem;
+  text-decoration: none;
 }
