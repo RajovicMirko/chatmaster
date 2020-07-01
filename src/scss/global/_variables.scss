@@ -1,7 +1,15 @@
 // COLORS ///////////////////////////////////////////////////////////
-$primary: rgb(0, 17, 255);
-$secondary: rgb(255, 0, 0);
+//GLOBAL
+$primary: rgb(76, 83, 175);
+$secondary: rgb(2, 169, 175);
 $white: rgb(255, 255, 255);
+
+//TEXT
+$text-primary: rgb(76, 83, 175);
+
+//FORM
+$form-primary: rgba(0, 17, 255, 0.7);
+$form-button-hover: rgba(76, 83, 175, 0.3);
 
 // DIMENSIONS //////////////////////////////////////////////////////
 $app-min-width: 350px;

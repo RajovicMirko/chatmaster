@@ -6,6 +6,8 @@ module.exports = {
           @import "@/scss/global/_variables.scss";
           @import '@/scss/global/_flex.scss';
           @import '@/scss/global/_display-size-control.scss';
+          @import '@/scss/global/_input-button-border.scss';
+          @import '@/scss/global/_form.scss';
         `
       }
     }

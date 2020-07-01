@@ -1,0 +1,47 @@
+$border-size: 0.1rem;
+$border-transparent: $border-size solid rgba($color: #000000, $alpha: 0);
+$border-primary: $border-size solid rgba($color: $primary, $alpha: 1);
+$border-secondary: $border-size solid rgba($color: $secondary, $alpha: 1);
+$box-shadow: 3px 3px 7px rgba($color: #000000, $alpha: 0.3);
+
+$transition: all 0.2s ease-in-out;
+
+input.bordered{
+  border-top: $border-size solid transparent;
+  border-bottom: $border-primary;
+  // box-shadow: $box-shadow;
+  transition: $transition;
+}
+
+input.bordered:hover{
+  border-top: $border-transparent;
+  border-top: $border-primary;
+  border-bottom: $border-primary;
+}
+
+input.bordered:focus{
+  border-left: $border-secondary;
+  border-right: $border-secondary;
+  border-top: $border-secondary;
+  border-bottom: $border-secondary;
+  box-shadow: $box-shadow;
+}
+
+button.bordered{
+  border-top: $border-primary;
+  border-bottom: $border-primary;
+}
+
+button.bordered:hover,
+button.bordered:focus{
+  border-left: $border-secondary;
+  border-right: $border-secondary;
+  border-top: $border-secondary;
+  border-bottom: $border-secondary;
+  color: $secondary;
+  box-shadow: $box-shadow;
+}
+
+button.bordered:active{
+  box-shadow: none;
+}

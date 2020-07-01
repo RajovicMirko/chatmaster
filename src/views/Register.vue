@@ -2,11 +2,11 @@
   <div class="register flex flex-column flex-align-center flex-justify-center">
     <form class="flex flex-column flex-align-center" @submit="handleSubmit">
       <h1 class="title">Chat Register</h1>
-      <input v-model="email" type="email" name="email" placeholder="Email" />
-      <input v-model="username" type="text" name="username" placeholder="Username" />
-      <input v-model="password" type="password" name="password" placeholder="Password" />
+      <input class="bordered" v-model="email" type="email" name="email" placeholder="Email" />
+      <input class="bordered" v-model="username" type="text" name="username" placeholder="Username" />
+      <input class="bordered" v-model="password" type="password" name="password" placeholder="Password" />
 
-      <button type="submit">Register</button>
+      <button type="submit" class="bordered">Register</button>
     </form>
   </div>
 </template>
