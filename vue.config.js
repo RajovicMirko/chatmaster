@@ -8,6 +8,7 @@ module.exports = {
           @import '@/scss/global/_display-size-control.scss';
           @import '@/scss/global/_input-button-border.scss';
           @import '@/scss/global/_form.scss';
+          @import '@/scss/global/_loaders.scss';
         `
       }
     }

@@ -1,0 +1,26 @@
+$loader-size: 60px;
+$loader-border-size: 10px;
+
+.loader-page{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: $loader-border-size solid $white;
+  border-top: $loader-border-size solid $primary;
+  border-radius: 50%;
+  width: $loader-size;
+  height: $loader-size;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
