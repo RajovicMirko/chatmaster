@@ -2,8 +2,13 @@ import { vm } from "@/main";
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   user: {},
+  navigationLinks: [
+    { name: "Login", to: "/login", isAuthenticated: false },
+    { name: "Register", to: "/register", isAuthenticated: false },
+    { name: "Logout", to: "/logout", isAuthenticated: true }
+  ]
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -42,6 +47,10 @@ const actions = {
 
 // GETTERS /////////////////////////////////////////////////////////////////////////////
 const getters = {
+  getNavigationLinks(state){
+    return state.navigationLinks.filter(link => link.isAuthenticated === state.isAuthenticated);
+  },
+  
   getIsAuthenticated(state) {
     return state.isAuthenticated;
   },

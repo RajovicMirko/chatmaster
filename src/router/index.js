@@ -22,6 +22,10 @@ const routes = [
     component: Register,
   },
   {
+    path: "/logout",
+    name: "Logout",
+  },
+  {
     path: "/chat",
     name: "Chat",
     component: Chat,
@@ -46,6 +50,10 @@ router.beforeEach((to, from, next) => {
 
   if (!isAuthenticated && ["Login", "Register"].indexOf(to.name) === -1) {
     return next({ name: "Login" });
+  }
+
+  if(to.name === "Logout"){
+    return store.dispatch('auth/handleLogout');
   }
 
   if (isAuthenticated && "Chat" !== to.name) {

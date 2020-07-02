@@ -14,4 +14,6 @@ const vm = new Vue({
   render: (h) => h(App),
 }).$mount("#app");
 
-export default vm;
+export{
+  vm
+}

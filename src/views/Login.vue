@@ -20,16 +20,17 @@ export default {
       password: ""
     };
   },
+
   methods: {
     handleSubmit(e) {
       e.preventDefault();
       e.stopPropagation();
-      console.log(this.$data);
+      this.$store.dispatch('auth/handleLogin', this.$data)
     }
   }
 };
 </script>
 
 <style lang="scss">
-@import "@/scss/login.scss";
+  @import "@/scss/login.scss";
 </style>

@@ -4,13 +4,13 @@
 }
 
 body {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, "Open Sans", sans-serif;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -21,18 +21,13 @@ body {
 }
 
 #app {
-  position: static;
   width: 100%;
   height: 100%;
-  // min-width: $app-min-width;
-  // max-width: $app-max-width;
-  // min-height: $app-min-height;
-  // max-height: $app-max-height;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .router-page {
   position: static;
   width: 100%;
-  height: $app-max-height - $nav-height;
+  height: 100%;
 }
