@@ -60,5 +60,7 @@ router.beforeEach((to, from, next) => {
     return next({ name: "Chat" });
   }
 
+  store.commit('chat/setCurrentPageName', to.name);
+
   next();
 });

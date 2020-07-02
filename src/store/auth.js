@@ -2,7 +2,7 @@ import { vm } from "@/main";
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   user: {},
   navigationLinks: [
     { name: "Login", to: "/login", isAuthenticated: false },
@@ -15,7 +15,8 @@ const state = {
 const mutations = {
   register(state, payload) {
     state;
-    console.log("register", payload);
+    payload;
+    state.isAuthenticated = true;
   },
 
   login(state) {

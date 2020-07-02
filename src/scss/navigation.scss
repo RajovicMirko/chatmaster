@@ -7,11 +7,14 @@
 }
 
 .navigation .banner {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .navigation .banner-icon {
   width: 3rem;
-  margin: 0 2px 5px 0;
+  margin: 0 2px 3px 0;
   padding: 0;
 }
 
@@ -24,4 +27,19 @@
   color: $white;
   margin-right: 0.4rem;
   text-decoration: none;
+}
+
+.drawer-controll{
+  font-size: 2rem;
+  color: $white;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+
+  &:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+
+  &:active{
+    box-shadow: none;
+  }
 }

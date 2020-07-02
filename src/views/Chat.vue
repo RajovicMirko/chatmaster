@@ -1,12 +1,23 @@
 <template>
   <div class="chat">
-    <h1>This is Chat page</h1>
+    <component :is="$getComponent('Drawer')" :drawerActive="drawerActive" />
+    <component :is="$getComponent('Messages')" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Chat"
+  name: "Chat",
+
+  computed: {
+    drawerActive(){
+      return this.$store.getters['chat/getDrawerActive'];
+    },
+    
+    users(){
+      return this.$store.getters["chat/getUsers"];
+    }
+  }
 };
 </script>
 
