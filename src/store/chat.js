@@ -1,26 +1,28 @@
+const contacts = [
+  {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
+  {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
+  {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
+  {id: 4, fullName: "Default User", img: "", status: ""},
+  
+  {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
+  {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
+  {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
+  {id: 4, fullName: "Default User", img: "", status: ""},
+  {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
+  {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
+  {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
+  {id: 4, fullName: "Default User", img: "", status: ""},
+  {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
+  {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
+  {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
+  {id: 4, fullName: "Default User", img: "", status: ""},
+]
+
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  contacts: [
-    {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
-    {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
-    {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
-    {id: 4, fullName: "Default User", img: "", status: ""},
-    
-    {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
-    {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
-    {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
-    {id: 4, fullName: "Default User", img: "", status: ""},
-    {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
-    {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
-    {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
-    {id: 4, fullName: "Default User", img: "", status: ""},
-    {id: 1, fullName: "Ivan Milutinović", img: "https://media-exp1.licdn.com/dms/image/C4E03AQFevRUndtwiiA/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=fe_-fUfDqZGyFhIm1fyW50fRf1Tz3I7nSQ1A-bWhoEg", status: "online"},
-    {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
-    {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
-    {id: 4, fullName: "Default User", img: "", status: ""},
-  ],
   drawerActive: true,
-  currentPageName: ''
+  currentPageName: '',
+  contactsFiltered: contacts,
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -31,6 +33,11 @@ const mutations = {
   
   setDrawerActive(state, payload){
     state.drawerActive = payload;
+  },
+
+  setContactsFiltered(state, payload){
+    const result = contacts.filter(contact => contact.fullName.toLowerCase().indexOf(payload.toLowerCase()) !== -1);
+    state.contactsFiltered = Object.assign([], result);
   }
 };
 
@@ -38,7 +45,12 @@ const mutations = {
 const actions = {
   handleDrawerActive({commit}, payload){
     commit("setDrawerActive", payload)
+  },
+
+  handleSearch({commit}, payload){
+    commit("setContactsFiltered", payload);
   }
+
 };
 
 // GETTERS /////////////////////////////////////////////////////////////////////////////
@@ -51,8 +63,12 @@ const getters = {
     return state.drawerActive;
   },
 
-  getContacts(state){
-    return state.contacts;
+  // getContacts(state){
+  //   return state.contacts;
+  // },
+
+  getContactsFiltered(state){
+    return state.contactsFiltered;
   }
 };
 

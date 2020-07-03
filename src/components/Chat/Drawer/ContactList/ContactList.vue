@@ -1,9 +1,9 @@
 <template>
   <div class="contact-list">
-    <div class="title"><h2>Contacts</h2></div>
-    <input type="text" class="search" id="contacts" placeholder="Search">
+    <div class="title"><h3>Contacts</h3></div>
+    <input type="text" class="search" id="contacts" placeholder="Search" v-model="query" @input="searchForContact">
     <div class="contacts">
-      <component v-for="(contact, i) in contacts" :key="i" :is="$getComponent('Contact')" :contact="contact" />
+      <component v-for="(contact, i) in contactsFiltered" :key="i" :is="$getComponent('Contact')" :contact="contact" />
     </div>
 
   </div>
@@ -13,9 +13,21 @@
   export default {
     name: 'ContactList',
 
+    data(){
+      return {
+        query:"",
+      }
+    },
+
     computed:{
-      contacts(){
-        return this.$store.getters["chat/getContacts"];
+      contactsFiltered(){
+          return this.$store.getters["chat/getContactsFiltered"];
+      }
+    },
+
+    methods:{
+      searchForContact(){
+        this.$store.dispatch("chat/handleSearch", this.query);
       }
     }
   }
@@ -23,25 +35,29 @@
 
 <style lang="scss" scoped>
 .contact-list{
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 87%;
 
   & .title{
     align-self: center;
+    flex: 1;
     margin: 0.5rem 0;
   }
 
   & .search{
+    flex: 1;
     background-color: change-color($color: $black, $alpha: 0.4);
     border: none;
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
     color: $white;
-    box-shadow: 0 3px 4px change-color($color: $white, $alpha: 0.4);
+    box-shadow: 0 2px 2px change-color($color: $white, $alpha: 0.4);
   }
 
   & .contacts{
+    flex: 35;
     height: 78%;
     overflow: auto;
 

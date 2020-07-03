@@ -1,6 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -10,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, "Open Sans", sans-serif;
+  font-family: Arial, Verdana, Geneva, Tahoma, "Open Sans", sans-serif;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;

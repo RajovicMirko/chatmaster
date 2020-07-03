@@ -38,7 +38,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   align-items: center;
   justify-content: space-between;
   padding: 0.2rem 1.2rem;
-  margin-bottom: 0.3rem;
+  margin: 0.3rem 0;
 
   & .status-img{
     position: relative;

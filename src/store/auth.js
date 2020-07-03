@@ -4,7 +4,7 @@ import {Loader} from "@/js/loaders/loader"
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   user: {
     id: 1,
     fullName: "Rajović Mirko",
@@ -53,7 +53,7 @@ const actions = {
           vm.$router.push({ name: "Chat" });
           
           Loader.end();
-      }, 0)
+      }, 2000)
     } catch (error) {
       Loader.end();
     }
