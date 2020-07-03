@@ -33,7 +33,7 @@ const mutations = {
 
   logout(state) {
     state.isAuthenticated = false;
-    state.user = {};
+    // state.user = {};
   },
 };
 

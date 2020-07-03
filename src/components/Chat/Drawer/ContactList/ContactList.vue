@@ -1,7 +1,7 @@
 <template>
   <div class="contact-list">
     <div class="title"><h3>Contacts</h3></div>
-    <input type="text" class="search" id="contacts" placeholder="Search" v-model="query" @input="searchForContact">
+    <input type="text" class="search" id="contacts" placeholder="Search" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
     <div class="contacts">
       <component v-for="(contact, i) in contactsFiltered" :key="i" :is="$getComponent('Contact')" :contact="contact" />
     </div>
@@ -28,6 +28,14 @@
     methods:{
       searchForContact(){
         this.$store.dispatch("chat/handleSearch", this.query);
+      },
+      
+      handleEnterPress(e){
+        const validKeyCode = [13, 27];
+        if(validKeyCode.indexOf(e.keyCode) !== -1) {
+          this.$store.dispatch("chat/handleSearch", this.query);
+          this.query = "";
+        }
       }
     }
   }
