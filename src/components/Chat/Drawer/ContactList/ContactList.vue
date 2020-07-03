@@ -1,7 +1,7 @@
 <template>
   <div class="contact-list">
     <div class="title"><h3>Contacts</h3></div>
-    <input type="text" class="search" id="contacts" placeholder="Search" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
+    <input type="text" class="search" placeholder="Search" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
     <div class="contacts">
       <component v-for="(contact, i) in contactsFiltered" :key="i" :is="$getComponent('Contact')" :contact="contact" />
     </div>
@@ -55,13 +55,15 @@
   }
 
   & .search{
-    flex: 1;
     background-color: change-color($color: $black, $alpha: 0.4);
     border: none;
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
     color: $white;
     box-shadow: 0 2px 2px change-color($color: $white, $alpha: 0.4);
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
   }
 
   & .contacts{

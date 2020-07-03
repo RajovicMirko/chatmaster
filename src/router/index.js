@@ -33,6 +33,7 @@ const routes = [
     children:[
       {
         path: "messages/:id",
+        name: "ChatMessages",
         component: getComponent("Messages")
       }
     ]
@@ -54,6 +55,8 @@ export default router;
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = store.getters["auth/getIsAuthenticated"];
+  
+  store.dispatch("chat/handleCurrentContact", to.params.id);
 
   if (!isAuthenticated && ["Login", "Register"].indexOf(to.name) === -1) {
     return next({ name: "Login" });

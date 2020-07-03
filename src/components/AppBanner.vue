@@ -1,10 +1,10 @@
 <template>
-  <div class="banner">
+  <router-link class="banner" to="/chat">
     <div class="flex flex-align-end">
       <img class="banner-icon" src="@/assets/icon-white.png" alt />
       <span class="banner-title">{{appName}}</span>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>

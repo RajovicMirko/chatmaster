@@ -1,5 +1,5 @@
 <template>
-  <div class="drawer-contact" :class="{active: contact.id === 2}" @click="handleContactSelected(contact)">
+  <div class="drawer-contact" :class="{active: contact.id === activeUser.id}" @click="handleContactSelected(contact)">
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
@@ -20,6 +20,12 @@
       contact:{
         type: Object,
         default: () => {return {}}
+      }
+    },
+
+    computed:{
+      activeUser(){
+        return this.$store.getters["chat/getCurrentContact"];
       }
     },
 

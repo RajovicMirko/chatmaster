@@ -20,6 +20,7 @@ const state = {
   drawerActive: true,
   currentPageName: '',
   contactsFiltered: contacts,
+  currentContact: {}
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -35,6 +36,12 @@ const mutations = {
   setContactsFiltered(state, payload){
     const result = contacts.filter(contact => contact.fullName.toLowerCase().indexOf(payload.toLowerCase()) !== -1);
     state.contactsFiltered = Object.assign([], result);
+  },
+
+  setCurrentContact(state, payload){
+    const result = Object.assign({}, contacts.find(contact => contact.id == payload));
+    
+    state.currentContact = Object.assign({}, result);
   }
 };
 
@@ -46,6 +53,10 @@ const actions = {
 
   handleSearch({commit}, payload){
     commit("setContactsFiltered", payload);
+  },
+
+  handleCurrentContact({commit}, payload){
+    commit("setCurrentContact", payload);
   }
 
 };
@@ -64,10 +75,8 @@ const getters = {
     return state.contactsFiltered;
   },
 
-  getContactById(state){
-    return function(contactId) {
-      return state.contactsFiltered.find(contact => contact.id == contactId);
-    }
+  getCurrentContact(state){
+    return state.currentContact;
   }
 };
 

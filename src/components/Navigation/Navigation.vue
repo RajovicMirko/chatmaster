@@ -1,7 +1,7 @@
 <template>
   <div class="navigation flex flex-align-center flex-justify-between">
     <div class="flex">
-      <i class="fas fa-bars drawer-controll" @click="drawerActive = !drawerActive" v-if="currentPageName === 'Chat'"></i>
+      <i class="fas fa-bars drawer-controll" @click="drawerActive = !drawerActive" v-if="drawerBtnVisiblePages.indexOf(currentPageName) !== -1"></i>
       <component :is="$getComponent('AppBanner')" :appName="packageJson.name" />
     </div>
     <component :is="$getComponent('NavigationLinks')" />
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       packageJson: pkgJson,
+      drawerBtnVisiblePages: ['Chat', 'ChatMessages']
     };
   },
 
