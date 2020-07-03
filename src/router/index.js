@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import store from "../store";
+import { getComponent } from '../components/componentMap'
 
 //PAGES
 import Error404 from "../views/Error404.vue";
@@ -29,6 +30,12 @@ const routes = [
     path: "/chat",
     name: "Chat",
     component: Chat,
+    children:[
+      {
+        path: "messages/:id",
+        component: getComponent("Messages")
+      }
+    ]
   },
   {
     path: "*",
@@ -56,9 +63,9 @@ router.beforeEach((to, from, next) => {
     return store.dispatch('auth/handleLogout');
   }
 
-  if (isAuthenticated && "Chat" !== to.name) {
-    return next({ name: "Chat" });
-  }
+  // if (isAuthenticated && "Chat" !== to.name) {
+  //   return next({ name: "Chat" });
+  // }
 
   store.commit('chat/setCurrentPageName', to.name);
   next();

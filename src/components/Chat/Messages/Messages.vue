@@ -1,12 +1,18 @@
 <template>
   <div class="chat-messages">
-    this is message router view part
+    this is messages view for partner id {{contact.id}}
   </div>
 </template>
 
 <script>
   export default {
-    name: "ChatMessages"
+    name: "ChatMessages",
+
+    computed:{
+      contact(){
+        return this.$store.getters["chat/getContactById"](this.$route.params.id)
+      }
+    }
   }
 </script>
 

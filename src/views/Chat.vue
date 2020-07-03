@@ -1,7 +1,7 @@
 <template>
   <div class="chat">
     <component :is="$getComponent('Drawer')" :drawerActive="drawerActive" />
-    <component :is="$getComponent('Messages')" />
+    <router-view />
   </div>
 </template>
 

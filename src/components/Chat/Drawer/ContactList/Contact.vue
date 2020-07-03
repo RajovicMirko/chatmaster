@@ -1,5 +1,5 @@
 <template>
-  <div class="drawer-contact" :class="{active: contact.id === 2}">
+  <div class="drawer-contact" :class="{active: contact.id === 2}" @click="handleContactSelected(contact)">
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
@@ -22,9 +22,12 @@
         default: () => {return {}}
       }
     },
-    computed:{
-      user(){
-        return this.$store.getters['auth/getUser'];
+
+    methods:{
+      handleContactSelected(contact){
+        this.$router.push({
+          path: `/chat/messages/${contact.id}`
+        })
       }
     }
   }

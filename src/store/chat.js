@@ -3,24 +3,16 @@ const contacts = [
   {id: 2, fullName: "Nikola Ćebić", img: "https://media-exp1.licdn.com/dms/image/C5603AQGbdU1QeIWt-A/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=na0cdl9dhPl55U9u_1afB4SEBVwcNGBRqq45biMNAWg", status: "busy"},
   {id: 3, fullName: "Nikola Lukić", img: "https://media-exp1.licdn.com/dms/image/C4D03AQGrugbu0TEJig/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=FiqZ0bBkel6rCreTTjGBhT8Dgl3K7gWkt5I8v6XbmbA", status: "offline"},
   {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
-  {id: 4, fullName: "Default User", img: "", status: ""},
+  {id: 5, fullName: "Default User", img: "", status: ""},
+  {id: 6, fullName: "Default User", img: "", status: ""},
+  {id: 7, fullName: "Default User", img: "", status: ""},
+  {id: 8, fullName: "Default User", img: "", status: ""},
+  {id: 9, fullName: "Default User", img: "", status: ""},
+  {id: 10, fullName: "Default User", img: "", status: ""},
+  {id: 11, fullName: "Default User", img: "", status: ""},
+  {id: 12, fullName: "Default User", img: "", status: ""},
+  {id: 13, fullName: "Default User", img: "", status: ""},
+  {id: 14, fullName: "Default User", img: "", status: ""},
 ]
 
 // STATE /////////////////////////////////////////////////////////////////////////////
@@ -68,12 +60,14 @@ const getters = {
     return state.drawerActive;
   },
 
-  // getContacts(state){
-  //   return state.contacts;
-  // },
-
   getContactsFiltered(state){
     return state.contactsFiltered;
+  },
+
+  getContactById(state){
+    return function(contactId) {
+      return state.contactsFiltered.find(contact => contact.id == contactId);
+    }
   }
 };
 

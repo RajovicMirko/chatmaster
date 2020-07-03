@@ -4,7 +4,7 @@ import {Loader} from "@/js/loaders/loader"
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   user: {
     id: 1,
     fullName: "Rajović Mirko",
