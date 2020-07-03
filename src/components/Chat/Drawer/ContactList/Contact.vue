@@ -1,5 +1,5 @@
 <template>
-  <div class="drawer-contact">
+  <div class="drawer-contact" :class="{active: contact.id === 2}">
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
@@ -8,13 +8,14 @@
     <div class="text">
       <span class="user-name">{{contact.fullName}}</span>
       <small v-if="contact.id !== 4" class="last-msg-text">Text from last message...</small>
+      <small v-else class="last-msg-text">No messages...</small>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'User',
+    name: 'Contact',
     props: {
       contact:{
         type: Object,
@@ -33,16 +34,29 @@
 $border: 3px solid change-color($secondary, $alpha: 0.5);
 
 .drawer-contact{
-  background-color: change-color(gray, $alpha: 0.5);
+  background-color: change-color($gray, $alpha: 0.4);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: 0.2rem 1.2rem;
   margin: 0.3rem 0;
+
+  &.active{
+    background-color: change-color($secondary, $alpha: 0.8);
+  }
+
+  &:hover{
+    background-color: change-color($gray, $alpha: 0.8);
+  }
+
+  &:active{
+    background-color: change-color($gray, $alpha: 1);
+  }
 
   & .status-img{
     position: relative;
     padding: 0.2rem 0 0 0;
+    margin-right: 1rem;
   }
 
   & img{

@@ -32,7 +32,7 @@ const mutations = {
   },
 
   logout(state) {
-    state.isAuthenticated = true;
+    state.isAuthenticated = false;
     state.user = {};
   },
 };
@@ -68,10 +68,11 @@ const actions = {
         vm.$router.push({ name: "Login" });
 
         Loader.end();
-      }, 1000)
+      }, 100)
     } catch (error) {
       Loader.end();
     }
+    
   },
 };
 

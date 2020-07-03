@@ -13,6 +13,7 @@
 <script>
   export default {
     name: 'User',
+    
     computed:{
       user(){
         return this.$store.getters['auth/getUser'];
@@ -29,6 +30,14 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  &:hover{
+    background-color: change-color($secondary, $alpha: 0.8);
+  }
+
+  &:active{
+    background-color: change-color($secondary, $alpha: 1);
+  }
 
   & .status-img{
     position: relative;
