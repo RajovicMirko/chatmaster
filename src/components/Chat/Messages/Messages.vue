@@ -10,7 +10,7 @@
 
     computed:{
       contact(){
-        return this.$store.getters["chat/getContactById"](this.$route.params.id)
+        return this.$store.getters["chat/getContactById"](this.$route.params.id);
       }
     }
   }
