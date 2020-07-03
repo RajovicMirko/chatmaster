@@ -1,6 +1,8 @@
 <template>
   <div class="chat-drawer" :class="{inactive: !drawerActive}">
-    <span>test item in drawer</span>
+    <!-- INSERT LIST COMPONENT -->
+    <component :is="$getComponent('User')" />
+    <component :is="$getComponent('ContactList')" />
   </div>
 </template>
 

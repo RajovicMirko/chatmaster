@@ -46,6 +46,7 @@ const router = new VueRouter({
 export default router;
 
 router.beforeEach((to, from, next) => {
+  store.commit('chat/setCurrentPageName', to.name);
   const isAuthenticated = store.getters["auth/getIsAuthenticated"];
 
   if (!isAuthenticated && ["Login", "Register"].indexOf(to.name) === -1) {
@@ -60,7 +61,6 @@ router.beforeEach((to, from, next) => {
     return next({ name: "Chat" });
   }
 
-  store.commit('chat/setCurrentPageName', to.name);
 
   next();
 });

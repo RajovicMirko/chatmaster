@@ -4,8 +4,14 @@ import {Loader} from "@/js/loaders/loader"
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
-  isAuthenticated: false,
-  user: {},
+  isAuthenticated: true,
+  user: {
+    id: 1,
+    fullName: "Rajović Mirko",
+    img: "https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.0-9/32089503_10216105870424518_2833207354701381632_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=BYu2dFGt75QAX88cu7P&_nc_ht=scontent.fbeg1-1.fna&oh=ee80d1171c3d60d590e9dca83adfc4b1&oe=5F230CC3",
+    //img: '',
+    status: "online"
+  },
   navigationLinks: [
     { name: "Login", to: "/login", isAuthenticated: false },
     { name: "Register", to: "/register", isAuthenticated: false },
@@ -26,7 +32,7 @@ const mutations = {
   },
 
   logout(state) {
-    state.isAuthenticated = false;
+    state.isAuthenticated = true;
     state.user = {};
   },
 };
@@ -47,7 +53,7 @@ const actions = {
           vm.$router.push({ name: "Chat" });
           
           Loader.end();
-      }, 3000)
+      }, 0)
     } catch (error) {
       Loader.end();
     }

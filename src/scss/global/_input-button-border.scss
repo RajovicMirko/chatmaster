@@ -11,37 +11,37 @@ input.bordered{
   border-bottom: $border-primary;
   // box-shadow: $box-shadow;
   transition: $transition;
-}
 
-input.bordered:hover{
-  border-top: $border-transparent;
-  border-top: $border-primary;
-  border-bottom: $border-primary;
-}
-
-input.bordered:focus{
-  border-left: $border-secondary;
-  border-right: $border-secondary;
-  border-top: $border-secondary;
-  border-bottom: $border-secondary;
-  box-shadow: $box-shadow;
+  &.bordered:hover{
+    border-top: $border-transparent;
+    border-top: $border-primary;
+    border-bottom: $border-primary;
+  }
+  
+  &.bordered:focus{
+    border-left: $border-secondary;
+    border-right: $border-secondary;
+    border-top: $border-secondary;
+    border-bottom: $border-secondary;
+    box-shadow: $box-shadow;
+  }
 }
 
 button.bordered{
   border-top: $border-primary;
   border-bottom: $border-primary;
-}
 
-button.bordered:hover,
-button.bordered:focus{
-  border-left: $border-secondary;
-  border-right: $border-secondary;
-  border-top: $border-secondary;
-  border-bottom: $border-secondary;
-  color: $secondary;
-  box-shadow: $box-shadow;
-}
+  &.bordered:hover,
+  &.bordered:focus{
+    border-left: $border-secondary;
+    border-right: $border-secondary;
+    border-top: $border-secondary;
+    border-bottom: $border-secondary;
+    color: $secondary;
+    box-shadow: $box-shadow;
+  }
 
-button.bordered:active{
-  box-shadow: none;
+  &.bordered:active{
+    box-shadow: none;
+  }
 }

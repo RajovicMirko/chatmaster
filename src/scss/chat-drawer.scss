@@ -13,12 +13,14 @@ $drawer-width: 300px;
   transition: all 0.3s ease-in-out;
   box-shadow: 3px 0 5px rgba(0, 0, 0, 0.4);
   color: $white;
+
+  &.inactive{
+    left: -$drawer-width;
+    box-shadow: none;
+    flex: 0;
+    min-width: 0;
+    max-width: 0;
+  }
 }
 
-.inactive{
-  left: -$drawer-width;
-  box-shadow: none;
-  flex: 0;
-  min-width: 0;
-  max-width: 0;
-}
+//USER STYLE
