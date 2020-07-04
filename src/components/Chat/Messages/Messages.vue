@@ -124,7 +124,7 @@
 
       handleSendMessage(e){
         if(e.keyCode === 13){
-          const result = { text: this.newMsg };
+          const result = { text: this.newMsg, type: "send" };
           this.messages.push(result);
           this.newMsg = "";
           this.scrollToBottom();

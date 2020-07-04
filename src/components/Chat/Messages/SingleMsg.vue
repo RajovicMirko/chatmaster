@@ -61,9 +61,9 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   align-items: center;
   justify-content: center;
   width: 60%;
-  min-width: 250px;
+  min-width: 254px;
   align-items: stretch;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   border-radius: 1rem;
 
   &.send{
@@ -81,6 +81,8 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   }
 
   &.recived{
+    float: left;
+
     & > *{
       color: $black;
     }
