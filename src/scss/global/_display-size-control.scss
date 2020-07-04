@@ -21,6 +21,7 @@
   }
 
   .single-msg{
+    width: 100% !important;
     & .contact-data{
       & .header{
         flex-direction: column-reverse;
