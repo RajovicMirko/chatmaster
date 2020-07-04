@@ -125,13 +125,16 @@
       },
 
       handleSendMessage(e){
-        if(e.keyCode === 13 && this.newMsg && !e.shiftKey){
+        if(e.keyCode === 13 && !e.shiftKey){
           e.preventDefault();
-          const result = { text: this.newMsg, type: "send" };
-          this.messages.push(result);
-          this.newMsg = "";
-          this.scrollToBottom();
-          this.textAreaRows = 1;
+
+          if(this.newMsg){
+            const result = { text: this.newMsg, type: "send" };
+            this.messages.push(result);
+            this.newMsg = "";
+            this.scrollToBottom();
+            this.textAreaRows = 1;
+          }
         }
         
         if(e.shiftKey){
