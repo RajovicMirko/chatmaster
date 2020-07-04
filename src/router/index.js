@@ -32,8 +32,13 @@ const routes = [
     component: Chat,
     children:[
       {
+        path: '/',
+        name: 'Chat',
+        component: getComponent("HappyMessaging")
+      },
+      {
         path: "messages/:id",
-        name: "ChatMessages",
+        name: "Chat",
         component: getComponent("Messages")
       }
     ]

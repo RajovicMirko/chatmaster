@@ -12,7 +12,7 @@ const contacts = [
   {id: 11, fullName: "Default User", img: "", status: ""},
   {id: 12, fullName: "Default User", img: "", status: ""},
   {id: 13, fullName: "Default User", img: "", status: ""},
-  {id: 14, fullName: "Default User", img: "", status: ""},
+  {id: 14, fullName: "Default Last User", img: "", status: ""},
 ]
 
 // STATE /////////////////////////////////////////////////////////////////////////////

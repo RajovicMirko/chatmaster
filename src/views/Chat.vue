@@ -9,6 +9,10 @@
 export default {
   name: "Chat",
 
+  beforeMount(){
+    this.$store.dispatch("chat/handleDrawerActive", true);
+  },
+
   computed: {
     drawerActive(){
       return this.$store.getters['chat/getDrawerActive'];
