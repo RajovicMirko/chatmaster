@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       packageJson: pkgJson,
-      drawerBtnVisiblePages: ['Chat', 'ChatMessages']
     };
   },
 
@@ -32,6 +31,10 @@ export default {
       set(val){
         this.$store.dispatch("chat/handleDrawerActive", val);
       }
+    },
+
+    drawerBtnVisiblePages(){
+      return this.$store.getters['chat/getDrawerBtnVisiblePages'];
     }
   }
 };

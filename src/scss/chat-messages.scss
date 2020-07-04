@@ -1,8 +1,8 @@
 .chat-messages{
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
-  // padding: 0.2rem 1rem 0 1rem;
   // white-space: nowrap;
   height: 100%;
   min-width: 250px;
@@ -18,7 +18,8 @@
   }
 
   & .msg-input{
-    position: relative;
+    position: fixed;
+    bottom: 10px;
     width: 100%;
     background-color: $primary;
 
@@ -38,12 +39,11 @@
       box-sizing: border-box;         /* Opera/IE 8+ */
 
       &:hover{
-        //outline: 1px solid $primary;
+        box-shadow: 3px 3px 3px $gray;
       }
       
       &:focus{
-        // outline: 1px solid $primary;
-        box-shadow: 0 2px 3px $secondary;
+        box-shadow: 3px 3px 3px change-color($color: $secondary, $alpha: 0.5);
       }
     }
   }

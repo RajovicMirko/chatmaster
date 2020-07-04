@@ -85,15 +85,15 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
     background-color: #000000;
 
     &.online{
-      background-color: #17ff02;
+      background-color: $online;
     }
 
     &.offline{
-      background-color: #ff0000;
+      background-color: $offline;
     }
 
     &.busy{
-      background-color: rgb(255, 196, 0);
+      background-color: $busy;
     }
   }
 

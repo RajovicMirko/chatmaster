@@ -19,4 +19,13 @@
     align-items: flex-start;
     justify-content: center;
   }
+
+  .single-msg{
+    & .contact-data{
+      & .header{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+      }
+    }
+  }
 }

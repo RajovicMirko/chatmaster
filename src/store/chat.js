@@ -18,6 +18,7 @@ const contacts = [
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
   drawerActive: true,
+  drawerBtnVisiblePages: ['Chat', 'Messages'],
   currentPageName: '',
   contactsFiltered: contacts,
   currentContact: {}
@@ -69,6 +70,10 @@ const getters = {
 
   getDrawerActive(state){
     return state.drawerActive;
+  },
+
+  getDrawerBtnVisiblePages(state){
+    return state.drawerBtnVisiblePages;
   },
 
   getContactsFiltered(state){

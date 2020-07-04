@@ -28,17 +28,16 @@ const routes = [
   },
   {
     path: "/chat",
-    name: "Chat",
     component: Chat,
     children:[
       {
-        path: '/',
+        path: '',
         name: 'Chat',
         component: getComponent("HappyMessaging")
       },
       {
         path: "messages/:id",
-        name: "Chat",
+        name: "Messages",
         component: getComponent("Messages")
       }
     ]
@@ -60,6 +59,7 @@ export default router;
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = store.getters["auth/getIsAuthenticated"];
+  const availablePages = store.getters['chat/getDrawerBtnVisiblePages'];
   
   store.dispatch("chat/handleCurrentContact", to.params.id);
 
@@ -70,10 +70,10 @@ router.beforeEach((to, from, next) => {
   if(to.name === "Logout"){
     return store.dispatch('auth/handleLogout');
   }
-
-  // if (isAuthenticated && "Chat" !== to.name) {
-  //   return next({ name: "Chat" });
-  // }
+  
+  if (isAuthenticated && availablePages.indexOf(to.name) === -1) {
+    return next({ name: "Chat" });
+  }
 
   store.commit('chat/setCurrentPageName', to.name);
   next();
