@@ -1,5 +1,5 @@
 <template>
-  <div class="drawer-contact" :class="{active: contact.id === activeUser.id}" @click="handleContactSelected(contact)">
+  <li class="drawer-contact" :class="{active: contact.id === activeUser.id}" @click="handleContactSelected(contact)">
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
@@ -10,7 +10,7 @@
       <small v-if="contact.id !== 4" class="last-msg-text">Text from last message...</small>
       <small v-else class="last-msg-text">No messages...</small>
     </div>
-  </div>
+  </li>
 </template>
 
 <script>

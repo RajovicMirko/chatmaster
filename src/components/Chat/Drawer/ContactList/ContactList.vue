@@ -2,9 +2,9 @@
   <div class="contact-list">
     <div class="title"><h3>Contacts</h3></div>
     <input type="text" class="search" placeholder="Search" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
-    <div class="contacts">
+    <ul class="contacts">
       <component v-for="(contact, i) in contactsFiltered" :key="i" :is="$getComponent('Contact')" :contact="contact" />
-    </div>
+    </ul>
 
   </div>
 </template>
