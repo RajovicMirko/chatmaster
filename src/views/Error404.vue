@@ -11,6 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '@/scss/error404.scss';
+  @import '@sc/error404.scss';
 </style>
 

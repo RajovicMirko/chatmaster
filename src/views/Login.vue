@@ -33,5 +33,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/scss/login.scss";
+  @import "@sc/login.scss";
 </style>

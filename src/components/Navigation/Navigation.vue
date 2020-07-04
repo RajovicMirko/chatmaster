@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/navigation";
+@import "@sc/navigation";
 </style>

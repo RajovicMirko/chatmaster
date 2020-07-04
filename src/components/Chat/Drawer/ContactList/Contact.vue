@@ -3,7 +3,7 @@
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
-      <img v-else src="@/assets/user-default-icon3.png" alt="">
+      <img v-else src="@a/user-default-icon3.png" alt="">
     </div>
     <div class="text">
       <span class="user-name">{{contact.fullName}}</span>

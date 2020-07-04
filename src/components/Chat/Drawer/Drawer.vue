@@ -19,5 +19,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/scss/chat-drawer.scss";
+  @import "@sc/chat-drawer.scss";
 </style>

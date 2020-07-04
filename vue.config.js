@@ -1,4 +1,17 @@
+const path = require('path');
+
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@c': path.resolve(__dirname, 'src/components'),
+        '@a': path.resolve(__dirname, 'src/assets'),
+        '@sc': path.resolve(__dirname, 'src/scss'),
+        '@st': path.resolve(__dirname, 'src/store'),
+        '@v': path.resolve(__dirname, 'src/views'),
+      },
+    },
+  },
   css: {
     loaderOptions: {
       sass: {

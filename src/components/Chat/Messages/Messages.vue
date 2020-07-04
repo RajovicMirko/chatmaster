@@ -4,7 +4,8 @@
       <component v-for="(message, i) in messages" :key="i" :is="$getComponent('SingleMsg')" :message="message" :contact="contact" />
     </div>
     <div class="msg-input">
-      <input type="text" rows="5" placeholder="Send Message" v-model="newMsg" @keypress="handleSendMessage">
+      <!-- <input type="text" placeholder="Send Message" v-model="newMsg" @keypress="handleSendMessage" /> -->
+      <textarea :rows="textAreaRows" placeholder="Message..." v-model="newMsg" @keydown.enter="handleSendMessage"></textarea>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@
     data(){
       return {
         newMsg: "",
+        textAreaRows: 1,
         messages:[
           {text: 'First message for contact ', type: 'recived'},
           {text: 'This is message for contact id This is message for contact id ', type: 'recived'},
@@ -123,11 +125,17 @@
       },
 
       handleSendMessage(e){
-        if(e.keyCode === 13){
+        if(e.keyCode === 13 && this.newMsg && !e.shiftKey){
+          e.preventDefault();
           const result = { text: this.newMsg, type: "send" };
           this.messages.push(result);
           this.newMsg = "";
           this.scrollToBottom();
+          this.textAreaRows = 1;
+        }
+        
+        if(e.shiftKey){
+          this.textAreaRows += 1;
         }
       }
     }
@@ -135,5 +143,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/scss/chat-messages.scss";
+  @import "@sc/chat-messages.scss";
 </style>

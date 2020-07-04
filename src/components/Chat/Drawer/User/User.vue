@@ -3,7 +3,7 @@
     <div class="status-img">
       <div class="status" :class="user.status" />
       <img v-if="user.img" :src="user.img" alt="">
-      <img v-else src="@/assets/user-default-icon3.png" alt="">
+      <img v-else src="@a/user-default-icon3.png" alt="">
     </div>
     <span class="user-name">{{user.fullName}}</span>
     <i class="fas fa-chevron-down"></i>

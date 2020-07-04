@@ -1,13 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import store from "../store";
-import { getComponent } from '../components/componentMap'
+import store from "@st";
+import { getComponent } from '@c/componentMap'
 
 //PAGES
-import Error404 from "../views/Error404.vue";
-import Login from "../views/Login.vue";
-import Register from "../views/Register.vue";
-import Chat from "../views/Chat.vue";
+import Error404 from "@v/Error404.vue";
+import Login from "@v/Login.vue";
+import Register from "@v/Register.vue";
+import Chat from "@v/Chat.vue";
 
 Vue.use(VueRouter);
 

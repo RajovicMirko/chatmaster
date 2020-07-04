@@ -121,6 +121,13 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
     & p.text{
       display: flex;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      width: 100%;
+      min-width: 254px;
     }
 
   }

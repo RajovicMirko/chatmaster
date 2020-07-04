@@ -1,11 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+import store from "@st";
 
 Vue.config.productionTip = false;
 
-import { getComponent } from "./components/componentMap";
+import { getComponent } from "@c/componentMap";
 Vue.prototype.$getComponent = getComponent;
 
 const vm = new Vue({
