@@ -1,6 +1,8 @@
 export const engTranslation = {
   navigation:{
-    login: 'Login'
+    login: 'Login',
+    register: 'Register',
+    logout: 'Logout'
   },
   login:{
     title: 'Login',

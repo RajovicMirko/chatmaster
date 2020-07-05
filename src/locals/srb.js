@@ -1,6 +1,8 @@
 export const srbTranslation = {
   navigation:{
-    login: 'Uloguj se'
+    login: 'Prijava',
+    register: 'Registracija',
+    logout: 'Odjava'
   },
   login:{
     title: 'Prijava',
