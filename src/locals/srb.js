@@ -3,17 +3,17 @@ export const srbTranslation = {
     login: 'Uloguj se'
   },
   login:{
-    title: 'Logovanje',
-    inputEmail: 'Mejl',
-    inputPassword: 'Šifra',
-    btnLogin: 'Uloguj se',
+    title: 'Prijava',
+    inputEmail: 'Email',
+    inputPassword: 'Lozinka',
+    btnLogin: 'Prijavi se',
   },
   register:{
     title: 'Registracija',
     inputFullName: 'Ime i Prezime',
-    inputEmail: 'Mejl',
-    inputPassword: 'Šifra',
-    inputRepeatPassword: 'Ponovi šifru',
+    inputEmail: 'Email',
+    inputPassword: 'Lozinka',
+    inputRepeatPassword: 'Ponovi lozinku',
     btnRegister: 'Registruj se'
   },
   chat:{
