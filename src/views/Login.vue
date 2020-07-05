@@ -1,11 +1,11 @@
 <template>
   <div class="login flex flex-column flex-align-center flex-justify-center">
     <form class="flex flex-column flex-align-center" @submit="handleSubmit">
-      <h1 class="title">Chat Login</h1>
-      <input class="bordered" v-model="email" type="email" name="email" placeholder="Email" />
-      <input class="bordered" v-model="password" type="password" name="password" placeholder="Password" />
+      <h1 class="title">Chat {{$t("login.title")}}</h1>
+      <input class="bordered" v-model="email" type="email" name="email" :placeholder="$t('login.inputEmail')" />
+      <input class="bordered" v-model="password" type="password" name="password" :placeholder="$t('login.inputPassword')" />
 
-      <button type="submit" class="bordered">Login</button>
+      <button type="submit" class="bordered">{{$t("login.btnLogin")}}</button>
     </form>
   </div>
 </template>

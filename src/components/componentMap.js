@@ -1,5 +1,6 @@
 import Navigation from "./Navigation/Navigation";
 import NavigationLinks from "./Navigation/NavigationLinks";
+import LocaleSwitcher from "@c/Navigation/LocaleSwitcher";
 import AppBanner from "./Navigation/AppBanner";
 import Drawer from "./Chat/Drawer/Drawer";
 import Messages from "./Chat/Messages/Messages";
@@ -12,6 +13,7 @@ import ContactList from "./Chat/Drawer/ContactList/ContactList";
 const components = {
   Navigation,
   NavigationLinks,
+  LocaleSwitcher,
   AppBanner,
   Drawer,
   Messages,

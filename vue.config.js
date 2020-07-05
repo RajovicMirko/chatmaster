@@ -9,6 +9,7 @@ module.exports = {
         '@sc': path.resolve(__dirname, 'src/scss'),
         '@st': path.resolve(__dirname, 'src/store'),
         '@v': path.resolve(__dirname, 'src/views'),
+        '@l': path.resolve(__dirname, 'src/locals'),
       },
     },
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-view flex flex-column flex-1 flex-justify-center flex-align-center">
     <img src="@/assets/icon.png" alt />
-    <h1>Happy Messaging</h1>
+    <h1>{{$t("chat.happyMessaging.title")}}</h1>
   </div>
 </template>
 

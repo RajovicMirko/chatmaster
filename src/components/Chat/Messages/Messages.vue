@@ -5,7 +5,7 @@
     </div>
     <div class="msg-input">
       <!-- <input type="text" placeholder="Send Message" v-model="newMsg" @keypress="handleSendMessage" /> -->
-      <textarea :rows="textAreaRows" placeholder="Message..." v-model="newMsg" @keydown.enter="handleSendMessage"></textarea>
+      <textarea :rows="textAreaRows" :placeholder="$t('chat.newMessage')" v-model="newMsg" @keydown.enter="handleSendMessage"></textarea>
     </div>
   </div>
 </template>

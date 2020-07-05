@@ -1,6 +1,5 @@
 import { vm } from "@/main";
-import {Loader} from "@/js/loaders/loader"
-
+import {Loader} from "@/js/loaders/loader";
 
 // STATE /////////////////////////////////////////////////////////////////////////////
 const state = {
@@ -12,11 +11,14 @@ const state = {
     //img: '',
     status: "online"
   },
+
   navigationLinks: [
     { name: "Login", to: "/login", isAuthenticated: false },
     { name: "Register", to: "/register", isAuthenticated: false },
     { name: "Logout", to: "/logout", isAuthenticated: true }
-  ]
+  ],
+
+  locals:['eng', 'srb'],
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -78,6 +80,10 @@ const actions = {
 
 // GETTERS /////////////////////////////////////////////////////////////////////////////
 const getters = {
+  getLocals(state){
+    return state.locals;
+  },
+
   getNavigationLinks(state){
     return state.navigationLinks.filter(link => link.isAuthenticated === state.isAuthenticated);
   },

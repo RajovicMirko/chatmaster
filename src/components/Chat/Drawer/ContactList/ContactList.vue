@@ -1,7 +1,7 @@
 <template>
   <div class="contact-list">
-    <div class="title"><h3>Contacts</h3></div>
-    <input type="text" class="search" placeholder="Search" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
+    <div class="title"><h3>{{$t("chat.contacts")}}</h3></div>
+    <input type="text" class="search" :placeholder="$t('chat.search')" v-model="query" @input="searchForContact" @keypress="handleEnterPress" @keydown.esc="handleEnterPress">
     <ul class="contacts">
       <component v-for="(contact, i) in contactsFiltered" :key="i" :is="$getComponent('Contact')" :contact="contact" />
     </ul>

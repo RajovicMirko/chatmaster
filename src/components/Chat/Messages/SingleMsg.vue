@@ -7,8 +7,8 @@
 
       <div v-if="message.type === 'recived'" class="contact-data">
         <div class="header">
-          <small class="contact-name">{{ contact.fullName }} wrote</small>
-          <small class="time">04.07.2020. 11:18</small>
+          <small class="contact-name">{{ $t("chat.messageHeaderUserPart", {fullName: contact.fullName}) }}</small>
+          <small class="time">{{ $d(new Date(), 'long') }}</small>
         </div>
         <p class="text">{{ message.text }}</p>
       </div>
@@ -21,8 +21,8 @@
 
       <div v-if="message.type === 'send'" class="contact-data">
         <div class="header">
-          <small class="contact-name">{{ user.fullName }} wrote</small>
-          <small class="time">04.07.2020. 11:18</small>
+          <small class="contact-name">{{ $t("chat.messageHeaderUserPart", {fullName: user.fullName}) }}</small>
+          <small class="time">{{ $d(new Date(), 'long') }}</small>
         </div>
         <p class="text">{{ message.text }}</p>
       </div>

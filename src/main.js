@@ -8,9 +8,12 @@ Vue.config.productionTip = false;
 import { getComponent } from "@c/componentMap";
 Vue.prototype.$getComponent = getComponent;
 
+import { i18n } from '@l/index'
+
 const vm = new Vue({
   router,
   store,
+  i18n,
   render: (h) => h(App),
 }).$mount("#app");
 
