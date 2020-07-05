@@ -61,7 +61,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   align-items: center;
   justify-content: center;
   width: 60%;
-  min-width: 310px;
+  min-width: 320px;
   align-items: stretch;
   margin: 0.3rem 0;
   border-radius: 1rem;
