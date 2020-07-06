@@ -46,7 +46,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // height: 87%;
+  height: 87%;
 
   & .title{
     align-self: center;
