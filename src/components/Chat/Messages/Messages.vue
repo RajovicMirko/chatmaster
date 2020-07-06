@@ -4,7 +4,6 @@
       <component v-for="(message, i) in messages" :key="i" :is="$getComponent('SingleMsg')" :message="message" :contact="contact" />
     </div>
     <div class="msg-input">
-      <!-- <input type="text" placeholder="Send Message" v-model="newMsg" @keypress="handleSendMessage" /> -->
       <textarea :rows="textAreaRows" :placeholder="$t('chat.newMessage')" v-model="newMsg" @keydown.enter="handleSendMessage"></textarea>
     </div>
   </div>

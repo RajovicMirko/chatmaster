@@ -13,8 +13,8 @@ const messages = {
 
 //DATE FORMATS
 const dateTimeFormats = {
-  'eng': engDateFormats,
-  'srb': srbDateFormats
+  eng: engDateFormats,
+  srb: srbDateFormats
 }
 
 

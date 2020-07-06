@@ -1,12 +1,12 @@
 $drawer-width: 300px;
 
 .chat-drawer{
+  position: static;
   float: left;
-  position: relative;
   flex: 1;
   min-width: $drawer-width;
   max-width: $drawer-width;
-  height: 100%;
+  // height: 100%;
   background-color: $primary;
   overflow: hidden;
   left: 0px;
