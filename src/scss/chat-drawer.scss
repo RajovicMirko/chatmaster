@@ -2,10 +2,7 @@ $drawer-width: 300px;
 
 .chat-drawer{
   position: relative;
-  float: left;
-  flex: 1;
-  min-width: $drawer-width;
-  max-width: $drawer-width;
+  width: $drawer-width;
   height: 100%;
   background-color: $primary;
   overflow: hidden;
@@ -15,11 +12,8 @@ $drawer-width: 300px;
   color: $white;
 
   &.inactive{
-    left: -$drawer-width;
+    width: 0;
     box-shadow: none;
-    flex: 0;
-    min-width: 0;
-    max-width: 0;
   }
 }
 

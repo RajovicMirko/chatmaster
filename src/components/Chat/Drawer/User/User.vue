@@ -30,6 +30,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  white-space: nowrap;
 
   &:hover{
     background-color: change-color($secondary, $alpha: 0.8);
