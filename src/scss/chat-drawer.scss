@@ -1,29 +1,37 @@
-$drawer-width: 300px;
-
 .chat-drawer{
-  // position: relative;
-  min-width: 300px;
-  width: 300px;
-  transition: all 0.3s ease-in-out;
+  position: relative;
   display: flex;
   flex-direction: column;
+  min-width: $drawer-width;
+  max-width: $drawer-width;
+  left: 0;
   height: 100%;
   background-color: $primary;
   color: $white;
   box-shadow: 3px 0 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
 
   &.inactive{
-    width: 0;
+    left: -$drawer-width;
     box-shadow: none;
     min-width: 0;
+    max-width: 0;
   }
 
   & .title{
-    text-align: center;
-    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    height: 40px;
+    min-height: 40px;
   }
 
   & .search{
+    position: relative;
+    height: 32px;
+    min-height: 32px;
     width: 100%;
     background-color: change-color($color: $black, $alpha: 0.4);
     border: none;
@@ -36,5 +44,3 @@ $drawer-width: 300px;
     box-sizing: border-box;         /* Opera/IE 8+ */
   }
 }
-
-//USER STYLE

@@ -14,5 +14,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@sc/app.scss";
+  @import "@sc/app.scss";
 </style>
