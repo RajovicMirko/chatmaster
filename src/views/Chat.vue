@@ -26,5 +26,9 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@sc/chat.scss";
+  // @import "@sc/chat.scss";
+  .chat{
+    flex: 1;
+    display: flex;
+  }
 </style>

@@ -8,30 +8,18 @@
 }
 
 @media (min-width: $sm) and (max-width: $md){
-  body{
-    align-items: flex-start;
-    justify-content: center;
-  }
 }
 
 @media (max-width: $sm){
-  body{
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
   .chat-drawer{
-    position: absolute !important;
-    z-index: 999 !important;
+    position: relative !important;
     left: 0;
 
-    &.inactive{
-      left: -300px;
-    }
-  }
 
-  .chat-messages{
-    // padding-bottom: 8rem !important;
+    &.inactive{
+      left: -$drawer-width;
+      position: absolute !important;
+    }
   }
 
   .single-msg{

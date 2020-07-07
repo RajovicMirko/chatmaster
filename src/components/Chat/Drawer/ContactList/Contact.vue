@@ -1,5 +1,5 @@
 <template>
-  <li class="drawer-contact" :class="{active: contact.id === activeUser.id}" @click="handleContactSelected(contact)">
+  <div class="drawer-contact" :class="{active: contact.id === activeUser.id}" @click="handleContactSelected(contact)">
     <div class="status-img">
       <div class="status" :class="contact.status" />
       <img v-if="contact.img" :src="contact.img" alt="">
@@ -10,7 +10,7 @@
       <small v-if="contact.id !== 4" class="last-msg-text">Text from last message...</small>
       <small v-else class="last-msg-text">No messages...</small>
     </div>
-  </li>
+  </div>
 </template>
 
 <script>
@@ -46,7 +46,6 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   background-color: change-color($gray, $alpha: 0.4);
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   padding: 0.2rem 1.2rem;
   margin: 0.3rem 0;
 
@@ -64,7 +63,8 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
   & .status-img{
     position: relative;
-    padding: 0.2rem 0 0 0;
+    display: flex;
+    // padding: 0.2rem 0 0 0;
     margin-right: 1rem;
   }
 
@@ -77,7 +77,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
   & .status{
     position: absolute;
-    left: -3px;
+    // left: -3px;
     width: 12px;
     height: 12px;
     border: $border;

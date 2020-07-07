@@ -26,8 +26,11 @@
 $border: 3px solid change-color($secondary, $alpha: 0.5);
 
 .drawer-user{
+  //position: relative;
   background-color: change-color($secondary, $alpha: 0.5);
   display: flex;
+  height: 65px;
+  min-height: 65px;
   justify-content: space-around;
   align-items: center;
   white-space: nowrap;
@@ -42,7 +45,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
   & .status-img{
     position: relative;
-    padding: 0.2rem 0 0 0;
+    display: flex;
   }
 
   & img{
@@ -54,7 +57,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
   & .status{
     position: absolute;
-    left: -3px;
+    // left: -3px;
     width: 12px;
     height: 12px;
     border: $border;
