@@ -11,6 +11,10 @@
 }
 
 @media (max-width: $sm){
+  .nav{
+    position: sticky;
+    top: 50px;
+  }
   .chat-drawer{
     position: relative !important;
     left: 0;
