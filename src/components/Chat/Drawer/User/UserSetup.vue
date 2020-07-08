@@ -49,7 +49,7 @@
   width: 100%;
   height: 0;
   min-height: 0;
-  background-color: change-color($secondary, $alpha: 1);
+  background-color: change-color($secondary, $alpha: 0.5);
   transition: all 0.3s ease-in-out;
 
   &.user-setup-active{
