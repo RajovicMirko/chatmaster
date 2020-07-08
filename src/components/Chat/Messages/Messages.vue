@@ -548,6 +548,7 @@
     methods:{
       scrollToBottom(){
         var objDiv = this.$refs.text;
+        
         objDiv.scrollTop = objDiv.scrollHeight;
         objDiv.style.scrollBehavior = 'smooth';
       },
@@ -560,8 +561,8 @@
             const result = { text: this.newMsg, type: "send" };
             this.messages.push(result);
             this.newMsg = "";
-            this.scrollToBottom();
             this.textAreaRows = 1;
+            setTimeout(this.scrollToBottom, 10)
           }
         }
         
