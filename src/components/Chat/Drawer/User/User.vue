@@ -46,6 +46,7 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
   white-space: nowrap;
 
   &:hover{
+    cursor: pointer;
     background-color: change-color($secondary, $alpha: 0.8);
   }
 
