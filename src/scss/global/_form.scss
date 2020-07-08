@@ -1,45 +1,48 @@
+.login,
+.register{
 
-form {
-  & > * {
-    border: none;
-    background: none;
-  }
-
-  position: relative;
-  min-width: $app-min-width - 50;
-  border-radius: 1rem;
-  padding: 1rem;
-
-  & .title {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.7rem;
-    color: $text-primary;
-  }
-
-  & > input {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 0.7rem;
-    padding: 0.6rem 0.8rem;
-    outline: none;
-    color: $text-primary;
-    border-radius: 0.9rem;
-  }
-
-
-  & > input:focus {
-    outline: none;
-  }
-
-  & > button {
-    font-size: 1.3rem;
-    color: $primary;
-    border-radius: 0.4rem;
-    padding: 0.5rem;
-    outline: none;
-    width: 50%;
-    border-bottom: 0.1rem solid $primary;
-    border-top: 0.1rem solid $primary;
-    cursor: pointer;
+  & form {
+    & > * {
+      border: none;
+      background: none;
+    }
+  
+    position: relative;
+    min-width: $app-min-width - 50;
+    border-radius: 1rem;
+    padding: 1rem;
+  
+    & .title {
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+      margin-bottom: 0.7rem;
+      color: $text-primary;
+    }
+  
+    & > input {
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+      padding: 0.6rem 0.8rem;
+      outline: none;
+      color: $text-primary;
+      border-radius: 0.9rem;
+    }
+  
+  
+    & > input:focus {
+      outline: none;
+    }
+  
+    & > button {
+      font-size: 1.3rem;
+      color: $primary;
+      border-radius: 0.4rem;
+      padding: 0.5rem;
+      outline: none;
+      width: 50%;
+      border-bottom: 0.1rem solid $primary;
+      border-top: 0.1rem solid $primary;
+      cursor: pointer;
+    }
   }
 }

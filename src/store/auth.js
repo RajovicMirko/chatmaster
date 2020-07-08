@@ -19,6 +19,8 @@ const state = {
   ],
 
   locals:['eng', 'srb'],
+
+  userStatusOptions: ['offline', 'online', 'busy'],
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -37,6 +39,10 @@ const mutations = {
     state.isAuthenticated = false;
     // state.user = {};
   },
+
+  setUserStatus(state, payload){
+    state.user.status = payload;
+  }
 };
 
 // ACTIONS /////////////////////////////////////////////////////////////////////////////
@@ -84,6 +90,10 @@ const getters = {
     return state.locals;
   },
 
+  getUserStatusOptions(state){
+    return state.userStatusOptions;
+  },
+
   getNavigationLinks(state){
     return state.navigationLinks.filter(link => link.isAuthenticated === state.isAuthenticated);
   },
@@ -95,6 +105,8 @@ const getters = {
   getUser(state) {
     return state.user;
   },
+
+
 };
 
 export default {

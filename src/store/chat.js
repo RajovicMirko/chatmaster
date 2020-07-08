@@ -21,7 +21,8 @@ const state = {
   drawerBtnVisiblePages: ['Chat', 'Messages'],
   currentPageName: '',
   contactsFiltered: contacts,
-  currentContact: {}
+  currentContact: {},
+  userSetupVisible: false
 };
 
 // MUTATIONS /////////////////////////////////////////////////////////////////////////////
@@ -43,6 +44,10 @@ const mutations = {
     const result = Object.assign({}, contacts.find(contact => contact.id == payload));
     
     state.currentContact = Object.assign({}, result);
+  },
+
+  setUserSetupVisible(state){
+    state.userSetupVisible = !state.userSetupVisible;
   }
 };
 
@@ -82,6 +87,10 @@ const getters = {
 
   getCurrentContact(state){
     return state.currentContact;
+  },
+
+  getUserSetupVisible(state){
+    return state.userSetupVisible;
   }
 };
 

@@ -7,6 +7,7 @@ import Messages from "./Chat/Messages/Messages";
 import HappyMessaging from "./Chat/Messages/HappyMessaging";
 import SingleMsg from "./Chat/Messages/SingleMsg";
 import User from "./Chat/Drawer/User/User";
+import UserSetup from "./Chat/Drawer/User/UserSetup";
 import Contact from "./Chat/Drawer/ContactList/Contact";
 import ContactList from "./Chat/Drawer/ContactList/ContactList";
 
@@ -20,6 +21,7 @@ const components = {
   HappyMessaging,
   SingleMsg,
   User,
+  UserSetup,
   Contact,
   ContactList
 };

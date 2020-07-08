@@ -1,12 +1,12 @@
 <template>
-  <div class="drawer-user">
+  <div class="drawer-user" @click="handleUserSetupVisible">
     <div class="status-img">
       <div class="status" :class="user.status" />
       <img v-if="user.img" :src="user.img" alt="">
       <img v-else src="@a/user-default-icon3.png" alt="">
     </div>
     <span class="user-name">{{user.fullName}}</span>
-    <i class="fas fa-chevron-down"></i>
+    <i class="fas fa-chevron-down" :class="{rotate: userSetupVisible}"></i>
   </div>
 </template>
 
@@ -17,6 +17,16 @@
     computed:{
       user(){
         return this.$store.getters['auth/getUser'];
+      },
+
+      userSetupVisible(){
+        return this.$store.getters['chat/getUserSetupVisible']
+      }
+    },
+
+    methods:{
+      handleUserSetupVisible(){
+        this.$store.commit('chat/setUserSetupVisible');
       }
     }
   }
@@ -78,6 +88,23 @@ $border: 3px solid change-color($secondary, $alpha: 0.5);
 
   & .user-name{
     font-weight: bold;
+  }
+
+  & i{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 0.5s;
+
+    &.rotate{
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
   }
 }
 </style>
