@@ -1,6 +1,6 @@
 <template>
   <div class="chat">
-    <component :is="$getComponent('Drawer')" :drawerActive="drawerActive" />
+    <component :is="$getComponent('Drawer')" />
     <router-view />
   </div>
 </template>
@@ -9,15 +9,7 @@
 export default {
   name: "Chat",
 
-  beforeMount(){
-    this.$store.dispatch("chat/handleDrawerActive", true);
-  },
-
   computed: {
-    drawerActive(){
-      return this.$store.getters['chat/getDrawerActive'];
-    },
-    
     users(){
       return this.$store.getters["chat/getUsers"];
     }

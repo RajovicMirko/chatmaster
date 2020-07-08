@@ -13,19 +13,18 @@
   export default {
     name: "ChatDrawer",
     
-    props: {
-      drawerActive:{
-        type: Boolean,
-        requiered: true
-      }
-    },
-    
     data(){
       return {
         query:"",
       }
     },
-    
+
+    computed: {
+      drawerActive(){
+        return this.$store.getters['chat/getDrawerActive'];
+      },
+    },
+
     methods:{
       searchForContact(){
         this.$store.dispatch("chat/handleSearch", this.query);
