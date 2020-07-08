@@ -28,8 +28,9 @@
 
       font-size: 1.5rem;
       border-radius: 50%;
-      background-color: change-color($color: $gray, $alpha: 0.5);
+      background-color: change-color($color: $secondary, $alpha: 0.8);
       color: $white;
+      box-shadow: 2px 2px 7px change-color($color: $gray, $alpha: 0.9);
       visibility: visible;
       opacity: 1;
       transition: all 0.5s ease-in-out;
