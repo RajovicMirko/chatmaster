@@ -2,6 +2,8 @@
   <div id="app">
     <component :is="$getComponent('Navigation')" />
     <component :is="$getComponent('LocaleSwitcher')" />
+
+    <notifications position="center"/>
     
     <router-view class="router-page" />
   </div>

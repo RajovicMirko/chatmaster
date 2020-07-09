@@ -1,5 +1,5 @@
 <template>
-  <div class="single-msg" :class="message.type">
+  <div class="single-msg" :class="message.type" @click="copyMessageTextToClipbord">
       <div v-if="message.type === 'recived'" class="status-img">
         <img v-if="contact.img" :src="contact.img" alt="">
         <img v-else src="@/assets/user-default-icon3.png" alt="">
@@ -47,6 +47,37 @@
     computed:{
       user(){
         return this.$store.getters["auth/getUser"];
+      }
+    },
+
+    methods: {
+      copyMessageTextToClipbord(){
+          try {
+            var el = document.createElement('textarea');
+            el.value = this.message.text;
+            el.setAttribute('readonly', '');
+            el.style = {position: 'absolute', left: '-9999px'};
+
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            
+            document.body.removeChild(el);
+
+            this.$notify({
+              type: 'positive',
+              title: 'CLIPBOARD',
+              text: 'You sucsesfully copied text message',
+              duration: 1000,
+            });
+          } catch (err) {
+            this.$notify({
+              type: 'warn',
+              title: 'CLIPBOARD',
+              text: "You didn't copied text message",
+              duration: 1000,
+            });
+          }
       }
     }
   }

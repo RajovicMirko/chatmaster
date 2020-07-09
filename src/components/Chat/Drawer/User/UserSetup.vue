@@ -47,26 +47,51 @@
 <style lang="scss" scoped>
 .user-setup{
   width: 100%;
-  height: 0;
-  min-height: 0;
+  height: 0px;
   background-color: change-color($secondary, $alpha: 0.5);
   transition: all 0.3s ease-in-out;
 
   &.user-setup-active{
-    min-height: 140px;
+    padding-top: 5px;
+    height: 300px;
   }
 
   & form{
-    margin: 0.5rem;
+    position: static;
+    display: flex;
+    flex-direction: column;
+
+    & label{
+      align-self: center;
+    }
     
     & input, & select{
-      margin-bottom: 0.2rem;
+      position: relative;
+      margin: 0.4rem;
       border: 1px solid $white;
-      width: 100%
+      min-width: inherit;
+      border: none;
+      outline: none;
+      background: none;
+      border: 1px solid change-color($color: $white, $alpha: 1.0);
+      border-radius: 10px;
+      color: $white;
+      font-size: 1rem;
+      padding: 3px;
+    }
+
+    & input:hover,
+    & select:hover{
+      box-shadow: 4px 4px 10px change-color($color: $black, $alpha: 0.3);;
     }
 
     & select{
       text-transform: capitalize;
+
+      & option{
+        background-color: $secondary;
+        padding: 1rem;
+      }
     }
   }
 }

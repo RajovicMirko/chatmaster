@@ -10,6 +10,9 @@ Vue.prototype.$getComponent = getComponent;
 
 import { i18n } from '@l/index'
 
+import Notifications from 'vue-notification';
+Vue.use(Notifications);
+
 const vm = new Vue({
   router,
   store,
