@@ -1,5 +1,5 @@
 .chat-drawer{
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   min-width: $drawer-width;
@@ -20,10 +20,10 @@
   }
 
   & .title{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: static;
     height: 40px;
     min-height: 40px;
   }

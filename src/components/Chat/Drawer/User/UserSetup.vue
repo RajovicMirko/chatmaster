@@ -47,17 +47,19 @@
 <style lang="scss" scoped>
 .user-setup{
   width: 100%;
-  height: 0px;
+  height: 0%;
+  max-height: 0;
   background-color: change-color($secondary, $alpha: 0.5);
   transition: all 0.3s ease-in-out;
 
   &.user-setup-active{
     padding-top: 5px;
-    height: 300px;
+    height: 100%;
+    max-height: 180px;
   }
 
   & form{
-    position: static;
+    position: relative;
     display: flex;
     flex-direction: column;
 
